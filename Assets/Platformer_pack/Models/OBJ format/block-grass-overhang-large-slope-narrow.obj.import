@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bk8a6eutwod0w"
+path="res://.godot/imported/block-grass-overhang-large-slope-narrow.obj-a2112871c25baa60bb4858f2a3c65aff.mesh"
+
+[deps]
+
+files=["res://.godot/imported/block-grass-overhang-large-slope-narrow.obj-a2112871c25baa60bb4858f2a3c65aff.mesh"]
+
+source_file="res://Assets/Platformer_pack/Models/OBJ format/block-grass-overhang-large-slope-narrow.obj"
+dest_files=["res://.godot/imported/block-grass-overhang-large-slope-narrow.obj-a2112871c25baa60bb4858f2a3c65aff.mesh", "res://.godot/imported/block-grass-overhang-large-slope-narrow.obj-a2112871c25baa60bb4858f2a3c65aff.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

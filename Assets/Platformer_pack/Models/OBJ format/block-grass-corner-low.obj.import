@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cxqgsficbo3mr"
+path="res://.godot/imported/block-grass-corner-low.obj-2cc7ed953a03ef0972bf9e16194e1bdf.mesh"
+
+[deps]
+
+files=["res://.godot/imported/block-grass-corner-low.obj-2cc7ed953a03ef0972bf9e16194e1bdf.mesh"]
+
+source_file="res://Assets/Platformer_pack/Models/OBJ format/block-grass-corner-low.obj"
+dest_files=["res://.godot/imported/block-grass-corner-low.obj-2cc7ed953a03ef0972bf9e16194e1bdf.mesh", "res://.godot/imported/block-grass-corner-low.obj-2cc7ed953a03ef0972bf9e16194e1bdf.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cppdeg5i885he"
+path="res://.godot/imported/indicator-special-area.obj-caad78ea28b6a17fd4e3da7d668213cc.mesh"
+
+[deps]
+
+files=["res://.godot/imported/indicator-special-area.obj-caad78ea28b6a17fd4e3da7d668213cc.mesh"]
+
+source_file="res://Assets/Prototype_kit/Models/OBJ format/indicator-special-area.obj"
+dest_files=["res://.godot/imported/indicator-special-area.obj-caad78ea28b6a17fd4e3da7d668213cc.mesh", "res://.godot/imported/indicator-special-area.obj-caad78ea28b6a17fd4e3da7d668213cc.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false
