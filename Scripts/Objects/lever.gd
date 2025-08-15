@@ -22,4 +22,18 @@ func _on_area_3d_body_exited(body: Node3D) -> void:
 
 func _input(event: InputEvent) -> void:
 	if Input.is_action_just_pressed("player 1 interact") and player1_in_range:
-		pass
+		if toggled:
+			animation_player.play("toggle-off")
+			toggled = false
+		else :
+			animation_player.play("toggle-on")
+			toggled = true
+			emit_signal("lever_toggled")
+	if Input.is_action_just_pressed("player 2 interact") and player2_in_range:
+		if toggled:
+			animation_player.play("toggle-off")
+			toggled = false
+		else :
+			animation_player.play("toggle-on")
+			toggled = true
+			emit_signal("lever_toggled")

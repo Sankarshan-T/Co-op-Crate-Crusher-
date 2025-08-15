@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=4 uid="uid://dlc5d7vo4s85o"]
+[gd_scene load_steps=7 format=4 uid="uid://dlc5d7vo4s85o"]
 
 [ext_resource type="Texture2D" uid="uid://dlao7ya0b2l6u" path="res://Assets/Prototype_kit/Models/FBX format/Textures/colormap.png" id="1_o2v54"]
 [ext_resource type="Script" uid="uid://b53f15syxg3x4" path="res://Scripts/Objects/exploding_crate.gd" id="1_x3075"]
@@ -41,9 +41,18 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_euuah")
 
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_x3075"]
+points = PackedVector3Array(-0.25, 0, -0.25, -0.25, 0, 0.249951, -0.25, 0.5, -0.25, 0.249951, 0, -0.25, -0.25, 0.5, 0.249951, 0.249951, 0, 0.249951, 0.249951, 0.5, -0.25, 0.249951, 0.5, 0.249951)
+
 [node name="Exploding Crate" type="Node3D"]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0)
 script = ExtResource("1_x3075")
 
 [node name="crate" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_1da6k")
 skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="crate"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="crate/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_x3075")

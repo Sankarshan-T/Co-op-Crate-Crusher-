@@ -1,0 +1,132 @@
+[gd_scene load_steps=8 format=3 uid="uid://bqq7lcgk3irvk"]
+
+[ext_resource type="Script" uid="uid://dhv4gyjg7pnj3" path="res://Scenes/Globals/main_screen.gd" id="1_ue77m"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_bfeqv"]
+font_size = 100
+font_color = Color(8.18223e-07, 0.59515, 0.444036, 1)
+
+[sub_resource type="Theme" id="Theme_bfeqv"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ue77m"]
+bg_color = Color(0, 0.229437, 0.211825, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="LabelSettings" id="LabelSettings_ue77m"]
+font_size = 25
+
+[sub_resource type="Theme" id="Theme_ue77m"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rukpe"]
+bg_color = Color(0, 0.715452, 0.408159, 1)
+corner_radius_top_left = 45
+corner_radius_top_right = 45
+corner_radius_bottom_right = 45
+corner_radius_bottom_left = 45
+
+[node name="MainScreen" type="CanvasLayer"]
+layer = 7
+script = ExtResource("1_ue77m")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+z_index = 5
+offset_right = 1152.0
+offset_bottom = 648.0
+color = Color(0.000551121, 1.50409e-08, 0.0572068, 1)
+
+[node name="Label" type="Label" parent="."]
+z_index = 7
+offset_top = 16.0
+offset_right = 1152.0
+offset_bottom = 153.0
+text = "Crate Chaos"
+label_settings = SubResource("LabelSettings_bfeqv")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="DesPanel" type="Panel" parent="."]
+z_index = 6
+offset_left = 32.0
+offset_top = 160.0
+offset_right = 432.0
+offset_bottom = 440.0
+theme = SubResource("Theme_bfeqv")
+theme_override_styles/panel = SubResource("StyleBoxFlat_ue77m")
+
+[node name="Description" type="Label" parent="DesPanel"]
+z_index = 7
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -184.0
+offset_top = -124.0
+offset_right = 182.0
+offset_bottom = 139.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Welcome to Crate Chaos,
+a simple crate crusher game.
+ Crush the crates using the
+ lever Get both players on
+ the ladder and move onto the
+ next level !
+"
+label_settings = SubResource("LabelSettings_ue77m")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CtrlPanel" type="Panel" parent="."]
+z_index = 6
+offset_left = 688.0
+offset_top = 152.0
+offset_right = 1088.0
+offset_bottom = 464.0
+theme = SubResource("Theme_bfeqv")
+theme_override_styles/panel = SubResource("StyleBoxFlat_ue77m")
+
+[node name="Ctrls" type="Label" parent="CtrlPanel"]
+z_index = 7
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -181.0
+offset_top = -150.0
+offset_right = 200.0
+offset_bottom = 151.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Controls:
+Player 1:  Arrow keys to move
+					M to interact
+
+Player 2:  WASD  keys to move
+					Z to interact
+
+R to restart"
+label_settings = SubResource("LabelSettings_ue77m")
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="."]
+z_index = 7
+offset_left = 416.0
+offset_top = 504.0
+offset_right = 696.0
+offset_bottom = 568.0
+theme = SubResource("Theme_ue77m")
+theme_override_colors/font_hover_pressed_color = Color(0.000631668, 0.277486, 0.897238, 1)
+theme_override_colors/font_hover_color = Color(0.791999, 0.791999, 0.791999, 1)
+theme_override_font_sizes/font_size = 45
+theme_override_styles/normal = SubResource("StyleBoxFlat_rukpe")
+text = "PLAY
+"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

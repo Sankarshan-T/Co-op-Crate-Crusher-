@@ -15,9 +15,12 @@ func _ready() -> void:
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
 	if not is_on_floor():
-		velocity.y += -90 * delta
+		velocity.y += -70 * delta
 	
 	var input_dir := Input.get_action_strength("ui_right") - Input.get_action_strength("ui_left")
+	
+	if Input.is_action_just_pressed("restart"):
+		get_tree().change_scene_to_file("res://Scenes/Globals/main_screen.tscn")
 	
 	velocity.x = input_dir* SPEED
 	move_and_slide()

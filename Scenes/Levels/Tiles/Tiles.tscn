@@ -1,11 +1,9 @@
-[gd_scene load_steps=6 format=4 uid="uid://cxo7ky2ysdbrh"]
-
-[ext_resource type="Texture2D" uid="uid://dlao7ya0b2l6u" path="res://Assets/Prototype_kit/Models/FBX format/Textures/colormap.png" id="1_bq8dh"]
+[gd_scene load_steps=5 format=4 uid="uid://cxo7ky2ysdbrh"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5a7lx"]
 resource_name = "colormap"
 vertex_color_use_as_albedo = true
-albedo_texture = ExtResource("1_bq8dh")
+albedo_color = Color(0, 0, 0, 1)
 emission_enabled = true
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_vbuxd"]
@@ -44,9 +42,9 @@ shadow_mesh = SubResource("ArrayMesh_vbuxd")
 points = PackedVector3Array(0.5, 1, 0.5, 0.5, 1, -0.5, -0.5, 1, 0.5, 0.5, 0, 0.5, 0.5, 0, -0.5, -0.5, 1, -0.5, -0.5, 0, 0.5, -0.5, 0, -0.5)
 
 [node name="Node3D" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 2, 0, 0, 0)
 
 [node name="shape-cube" type="MeshInstance3D" parent="."]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
 mesh = SubResource("ArrayMesh_p6u8b")
 skeleton = NodePath("")
 

@@ -15,10 +15,10 @@ func _ready() -> void:
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
 	if not is_on_floor():
-		velocity.y += -90 * delta
+		velocity.y += -70 * delta
 
-	# Handle jump.
-	
+	if Input.is_action_just_pressed("restart"):
+		get_tree().change_scene_to_file("res://Scenes/Globals/main_screen.tscn")
 
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.

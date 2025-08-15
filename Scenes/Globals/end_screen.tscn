@@ -1,0 +1,92 @@
+[gd_scene load_steps=8 format=3 uid="uid://nugtahybr33i"]
+
+[ext_resource type="Script" uid="uid://t051qtca7ad2" path="res://Scenes/Globals/end_screen.gd" id="1_rt2v3"]
+
+[sub_resource type="Theme" id="Theme_bfeqv"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ue77m"]
+bg_color = Color(0, 0.231373, 0.211765, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="LabelSettings" id="LabelSettings_ue77m"]
+font_size = 30
+
+[sub_resource type="Theme" id="Theme_ue77m"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rukpe"]
+bg_color = Color(0, 0.715452, 0.408159, 1)
+corner_radius_top_left = 45
+corner_radius_top_right = 45
+corner_radius_bottom_right = 45
+corner_radius_bottom_left = 45
+
+[sub_resource type="LabelSettings" id="LabelSettings_rt2v3"]
+font_size = 100
+font_color = Color(8.18223e-07, 0.59515, 0.444036, 1)
+
+[node name="EndScreen" type="CanvasLayer"]
+layer = 7
+script = ExtResource("1_rt2v3")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+z_index = 5
+offset_right = 1152.0
+offset_bottom = 648.0
+color = Color(0.000551121, 1.50409e-08, 0.0572068, 1)
+
+[node name="DesPanel" type="Panel" parent="."]
+z_index = 6
+offset_left = 32.0
+offset_top = 160.0
+offset_right = 1112.0
+offset_bottom = 440.0
+theme = SubResource("Theme_bfeqv")
+theme_override_styles/panel = SubResource("StyleBoxFlat_ue77m")
+
+[node name="Description" type="Label" parent="DesPanel"]
+z_index = 7
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -908.5
+offset_top = -131.5
+offset_right = 908.5
+offset_bottom = 131.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Well Played! More levels and cool features coming soon! You might want 
+to restart the game?"
+label_settings = SubResource("LabelSettings_ue77m")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="."]
+z_index = 7
+offset_left = 416.0
+offset_top = 504.0
+offset_right = 696.0
+offset_bottom = 568.0
+theme = SubResource("Theme_ue77m")
+theme_override_colors/font_hover_pressed_color = Color(0.000631668, 0.277486, 0.897238, 1)
+theme_override_colors/font_hover_color = Color(0.791999, 0.791999, 0.791999, 1)
+theme_override_font_sizes/font_size = 45
+theme_override_styles/normal = SubResource("StyleBoxFlat_rukpe")
+text = "RESTART"
+
+[node name="Label" type="Label" parent="."]
+z_index = 7
+offset_top = 16.0
+offset_right = 1152.0
+offset_bottom = 153.0
+text = "Crate Chaos"
+label_settings = SubResource("LabelSettings_rt2v3")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
