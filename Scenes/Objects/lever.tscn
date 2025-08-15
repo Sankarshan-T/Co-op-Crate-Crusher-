@@ -1,6 +1,6 @@
 [gd_scene load_steps=13 format=4 uid="uid://btc3k8x5pjgsy"]
 
-[ext_resource type="Texture2D" uid="uid://bsyjf0avobb3" path="res://Assets/Platformer_pack/Models/FBX format/Textures/colormap.png" id="1_f1e1e"]
+[ext_resource type="Texture2D" uid="uid://cvks1djxncv8p" path="res://Assets/colormap.png" id="1_f1e1e"]
 [ext_resource type="Script" uid="uid://c1m8yu1pnuxwm" path="res://Scripts/Objects/lever.gd" id="1_m12dp"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_n51qg"]

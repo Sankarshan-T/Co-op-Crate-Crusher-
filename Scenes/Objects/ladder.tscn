@@ -1,15 +1,17 @@
 [gd_scene load_steps=7 format=4 uid="uid://r305n3yihm2q"]
 
-[ext_resource type="Texture2D" uid="uid://bsyjf0avobb3" path="res://Assets/Platformer_pack/Models/FBX format/Textures/colormap.png" id="1_2g1wp"]
 [ext_resource type="Script" uid="uid://8ur33hy3jq5n" path="res://Scripts/Objects/ladder.gd" id="1_u7j4s"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ow675"]
 size = Vector3(0.992188, 2.05489, 0.497314)
 
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_u7j4s"]
+load_path = "res://.godot/imported/colormap.png-d5097bd7c675d7bcea676f64270eaf28.s3tc.ctex"
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_g3euu"]
 resource_name = "colormap"
 vertex_color_use_as_albedo = true
-albedo_texture = ExtResource("1_2g1wp")
+albedo_texture = SubResource("CompressedTexture2D_u7j4s")
 emission_enabled = true
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_btk1x"]
